@@ -1,0 +1,3 @@
+backend/src/main/resources/firebase-key.json
+# backend/target/
+# frontend/node_modules/
