@@ -1,37 +1,30 @@
-HELP.md
-target/
+# Maven target folder
+/target/
+
+# Maven wrapper logs
 .mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-# Ignore the Firebase private key
-backend/src/main/resources/firebase-key.json
-# Also ignore build files
-backend/target/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IDE files
+.idea/
 *.iml
 *.ipr
+*.iws
+*.class
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# OS files
+.DS_Store
+Thumbs.db
 
-### VS Code ###
-.vscode/
+# Logs
+*.log
+
+# Build output jars
+*.jar
+*.war
+
+# Eclipse specific
+.settings/
+.project
+
+# Spring Boot devtools
+spring-boot-devtools.properties
