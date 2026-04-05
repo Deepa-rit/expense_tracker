@@ -1,23 +1,13 @@
-# Use an official Java runtime as a parent image
-FROM eclipse-temurin:17-jdk-jammy
+FROM openjdk:17-jdk-slim
 
-# Set working directory
 WORKDIR /app
 
-# Copy pom.xml and download dependencies
-COPY pom.xml .
-COPY mvnw .
-COPY .mvn .mvn
-RUN ./mvnw dependency:go-offline
+COPY . .
 
-# Copy source code
-COPY src src
+RUN chmod +x mvnw
 
-# Build the app
 RUN ./mvnw clean package -DskipTests
 
-# Expose port 8080
 EXPOSE 8080
 
-# Run the jar file
 CMD ["java", "-jar", "target/*.jar"]
