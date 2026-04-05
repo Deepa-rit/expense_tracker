@@ -6,9 +6,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
-
+@CrossOrigin(origins = "*")
 @RestController
-@CrossOrigin
 @RequestMapping("/expense")
 public class ExpenseController {
 
