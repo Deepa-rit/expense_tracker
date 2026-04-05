@@ -18,9 +18,9 @@ public class FirebaseService {
         try {
 
             if (FirebaseApp.getApps().isEmpty()) {
-
-                InputStream serviceAccount =
-                        getClass().getClassLoader().getResourceAsStream("firebase-key.json");
+                FileInputStream serviceAccount =
+    new FileInputStream("/etc/secrets/firebase-key.json");
+                
 
                 FirebaseOptions options = FirebaseOptions.builder()
                         .setCredentials(GoogleCredentials.fromStream(serviceAccount))
