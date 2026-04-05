@@ -20,7 +20,7 @@ function Dashboard() {
 
     try {
 
-      const res = await axios.get("http://localhost:8081/expense/all");
+      const res = await axios.get("https://expense-tracker-2-rv7v.onrender.com/expense/all");
 
       const data = res.data;
 
@@ -55,7 +55,7 @@ function Dashboard() {
 
       if (editId) {
 
-        await axios.put(`http://localhost:8081/expense/update/${editId}`, {
+        await axios.put(`https://expense-tracker-2-rv7v.onrender.com/expense/update/${editId}`, {
           name,
           amount
         });
@@ -66,7 +66,7 @@ function Dashboard() {
 
       } else {
 
-        await axios.post("http://localhost:8081/expense/add", {
+        await axios.post("https://expense-tracker-2-rv7v.onrender.com/expense/add", {
           name,
           amount
         });
@@ -89,7 +89,7 @@ function Dashboard() {
   // DELETE EXPENSE
   const deleteExpense = async (id) => {
 
-    await axios.delete(`http://localhost:8081/expense/delete/${id}`);
+    await axios.delete(`https://expense-tracker-2-rv7v.onrender.com/expense/delete/${id}`);
 
     fetchExpenses();
 
@@ -192,7 +192,7 @@ function Dashboard() {
 
   const fetchExpenses = async () => {
 
-    const res = await axios.get("http://localhost:8081/expense/all");
+    const res = await axios.get("https://expense-tracker-2-rv7v.onrender.com/expense/all");
 
     const data = res.data;
 
@@ -220,7 +220,7 @@ function Dashboard() {
 
     if(editId){
 
-      await axios.put(`http://localhost:8081/expense/update/${editId}`,{
+      await axios.put(`https://expense-tracker-2-rv7v.onrender.com/expense/update/${editId}`, {
         name,
         amount
       });
@@ -229,7 +229,7 @@ function Dashboard() {
 
     }else{
 
-      await axios.post("http://localhost:8081/expense/add",{
+      await axios.post("https://expense-tracker-2-rv7v.onrender.com/expense/add", {
         name,
         amount
       });
@@ -245,8 +245,7 @@ function Dashboard() {
 
   const deleteExpense = async (id) => {
 
-    await axios.delete(`http://localhost:8081/expense/delete/${id}`);
-
+    await axios.delete(`https://expense-tracker-2-rv7v.onrender.com/expense/delete/${id}`);
     fetchExpenses();
 
   };
